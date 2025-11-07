@@ -39,8 +39,8 @@ android {
     
     // Configures the Java version for compatibility
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_17
-        targetCompatibility = JavaVersion.VERSION_1_17
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
         jvmTarget = "17"
@@ -56,10 +56,14 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // --- THIS IS THE LINE WE ADDED ---
+    // --- NETWORKING LIBRARY ---
     // Library for making network calls to Vercel
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    // ---------------------------------
+
+    // --- KOTLIN COROUTINES (THESE WERE MISSING!) ---
+    // These are required for async operations in MainActivity
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     // Standard testing libraries (you can leave these)
     testImplementation("junit:junit:4.13.2")
