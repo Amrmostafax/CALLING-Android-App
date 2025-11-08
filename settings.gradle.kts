@@ -1,18 +1,5 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
+// This file tells Gradle what modules to include in the build.
+// In our case, it's just the "app" module.
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-rootProject.name = "MyVoiceBackend"
+rootProject.name = "CALLING" // This is your project's name
 include(":app")
